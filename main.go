@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strings"
 )
 
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
+	subdomain := strings.Split(r.Host, ".")[0]
 	fmt.Fprintf(w, `<!DOCTYPE html>
 <html>
 <head>
@@ -20,10 +22,10 @@ func helloWorld(w http.ResponseWriter, r *http.Request) {
 <body>
 	<div class="container">
 		<h1>Hello World</h1>
-		<p>You are visiting from: %s</p>
+		<p>You are visiting from: <strong>%s</strong></p>
 	</div>
 </body>
-</html>`, r.Host)
+</html>`, subdomain)
 }
 
 func main() {
