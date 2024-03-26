@@ -4,7 +4,8 @@ This repository is part of the [Hobby Hoster](https://github.com/skamensky/hobby
 
 This particular repo is specifically tailored for hosting a simple "Hello World" web application. The application serves a webpage that greets visitors and dynamically displays the subdomain from which they are accessing the site. This is a basic demonstration of how to use Docker and Go for web development within the Hobby Hoster ecosystem.
 
-This site can be hosted on any subdomain configured within the Hobby Hoster project.
+This site is hosted at [hello-world.kelev.dev](https://hello-world.kelev.dev/).
+
 
 ## Upstream Repository
 
